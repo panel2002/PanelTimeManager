@@ -1,8 +1,5 @@
 package model.Objects;
-import model.Objects.Plan;
 import model.Time.formatter;
-
-import java.util.Objects;
 import java.util.Scanner;
 
 public class Creator {
@@ -17,18 +14,15 @@ public class Creator {
         System.out.print("please enter plan finished status:");
         while (!finishedStatusCheck) {
             switch (input.nextLine()) {
-                case "true":
+                case "true" -> {
                     dummy.FinishedStatusSetter(true);
                     finishedStatusCheck = true;
-                    break;
-                case "false":
+                }
+                case "false" -> {
                     dummy.FinishedStatusSetter(false);
                     finishedStatusCheck = true;
-                    break;
-                default:
-                    System.out.print("please re-enter:");
-                    break;
-
+                }
+                default -> System.out.print("please re-enter:");
             }
         }
         System.out.print("please enter plan starting time:");
