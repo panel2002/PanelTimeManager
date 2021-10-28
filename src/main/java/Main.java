@@ -1,9 +1,5 @@
 import model.Objects.Creator;
-import model.Objects.Objective;
 import model.Objects.Plan;
-
-import java.time.LocalDateTime;
-
 public class Main {
     public static void main(String[] args){
         Plan newSchedule;

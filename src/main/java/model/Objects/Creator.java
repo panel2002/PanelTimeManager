@@ -1,5 +1,8 @@
 package model.Objects;
 import model.Time.formatter;
+
+import java.time.LocalDateTime;
+import java.time.temporal.ChronoUnit;
 import java.util.Scanner;
 
 public class Creator {
@@ -29,6 +32,7 @@ public class Creator {
         dummy.StartTimeSetter(formatter.format(input.nextLine()));
         System.out.print("please enter plan ending time:");
         dummy.EndTimeSetter(formatter.format(input.nextLine()));
+        dummy.OverdueStatusSetter(LocalDateTime.now().until(dummy.EndTimeGetter(), ChronoUnit.MILLIS) <= 0 && !dummy.FinishedStatusGetter());
         return dummy;
     }
 }

@@ -14,12 +14,10 @@ public class formatter {
                 LocalDateTime time;
                 time = LocalDateTime.parse(inputTime, format);
                 return time;
-            } catch (Exception ignored) {
+            } catch (Exception e) {
                 System.out.print("please re-enter:");
                 inputTime = input.nextLine();
-                DateTimeFormatter format = DateTimeFormatter.ofPattern("yyyy/MM/dd HH:mm");
-                LocalDateTime time;
-                time = LocalDateTime.parse(inputTime, format);
+//                format(inputTime);
 
             }
         }
